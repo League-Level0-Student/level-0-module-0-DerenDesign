@@ -8,9 +8,15 @@ public class WorldDomination {
 	public static void main(String[] args) {
 		
 		// 1. Ask the user if they know how to write code.
-
+		String code = "Do you know how to Code?";
+		String answer = JOptionPane.showInputDialog(null, code);
 		// 2. If they say "yes", tell them they will rule the world.
-
+		
+		if ( answer.equalsIgnoreCase("yes")) {
+			JOptionPane.showMessageDialog(null,"Yay!");
+		}
+		else
+			JOptionPane.showMessageDialog(null, "Sign up for classes at The League!");
 		// 3. Otherwise, tell them to sign up for classes at The League.
 
 	}
