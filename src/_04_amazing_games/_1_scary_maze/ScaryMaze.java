@@ -39,7 +39,7 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		
 		
 		//2. Change the line of code below so that it uses YOUR maze's file name
-		maze = ImageIO.read(getClass().getResource("standardMaze.png"));
+		maze = ImageIO.read(getClass().getResource("pixil-frame-0(1).png"));
 		
 		
 		//3. Run the program. Do you see your maze? Don't continue until you do.
@@ -57,11 +57,12 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		int mouseColor = maze.getRGB(mouseX, mouseY);	
 		
 		//4. Print the mouseColor variable (Hint: use syso)
+		System.out.print(mouseColor);
 		
 		//5.  Run your program and move your mouse over the START COLOR. A number will be printed to the console
 		
 		
-		int startColor=0;
+		int startColor= -11751600;
 		//6. Change the value of this startColor variable to the number printed in the previous step. 
 		
 		
@@ -73,6 +74,10 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		
 		
 		//7. Make a new int variable for the background color of the maze
+		int background = maze.getRGB(mouseX, mouseY);
+		System.out.println(background);
+		int backgroundColor = -16728876;
+		int endColor = -43230;
 
 		
 		//8. Run the program and move the mouse over the BACKGROUND COLOR. 
@@ -81,7 +86,12 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		
 		
 		if (started) {
-		
+			if (mouseColor == backgroundColor) {
+				scare();
+			}
+			if (mouseColor == endColor); {
+				JOptionPane.showMessageDialog(null, "You won!");
+			}
 		
 			//9. If the mouse falls off the path (which means it is on the background color)
 			//		call the scare method - scare();
@@ -113,7 +123,7 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 
 		//12. Find a scary image and drop it into the _04_amazing_games._1_scary_maze package. 
 		//    Use the showScaryImage method below and send it the name of your picture file
-		
+		showScaryImage("scarry image.PNG");
 		
 	}
 	

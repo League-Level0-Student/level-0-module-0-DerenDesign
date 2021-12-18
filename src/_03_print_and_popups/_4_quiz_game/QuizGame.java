@@ -10,10 +10,9 @@ public class QuizGame {
 		// ASK A QUESTION AND CHECK THE ANSWER
 		
 				// 2.  Ask the user a question 
-				String question = JOptionPane.showInputDialog("How many minutes in one day?");
-				String question2 = JOptionPane.showInputDialog("How many inches is one feet?");
-				String question3 = JOptionPane.showInputDialog("How many hours in a year?");
+	
 				// 3.  Use an if statement to check if their answer is correct
+				String question = JOptionPane.showInputDialog("How many minutes in one day?");
 				if (question.equalsIgnoreCase("1440")) {
 					JOptionPane.showMessageDialog(null, "Great Job!");
 					score = score + 1;
@@ -22,7 +21,8 @@ public class QuizGame {
 					JOptionPane.showMessageDialog(null, "Incorrect.");
 					score = score - 1;
 				}
-				if (question2.equalsIgnoreCase("12")) {
+				question = JOptionPane.showInputDialog("How many inches is one feet?");
+				if (question.equalsIgnoreCase("12")) {
 					JOptionPane.showMessageDialog(null, "Good!");
 					score = score + 1;
 				}
@@ -30,8 +30,13 @@ public class QuizGame {
 					JOptionPane.showMessageDialog(null, "That is incorrect.");
 					score = score -1;
 				}
-				if (question3.equalsIgnoreCase("8760")) {
-					JOptionPane.showMessageDialog(parentComponent, message);
+				question = JOptionPane.showInputDialog("How many hours in a year?");
+				if (question.equalsIgnoreCase("8760")) {
+					JOptionPane.showMessageDialog(null, "Correct!");
+					score = score + 1;
+				}
+				else {
+					JOptionPane.showMessageDialog(null, "That is not right!");
 				}
 					
 				// 4.  if the user's answer was correct, add one to their score 
