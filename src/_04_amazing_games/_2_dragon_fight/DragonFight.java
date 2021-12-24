@@ -95,14 +95,14 @@ public class DragonFight {
 
 	static void playerLost() {
 		// 11. Tell the player that they have been defeated by the dragon and have no treasure
-
+		System.out.println("You have been defeated by the dragon and have NO treasure.");
 
 		System.exit(0);   //This code ends the program
 	}
 
 	static void dragonLost() {
 		// 12. Tell the user that the dragon has been defeated and they get a ton of gold!
-
+		System.out.println("The dragon has been defeated! ... You got a TON of gold!");
 		System.exit(0);   //This code ends the program
 	}
 
